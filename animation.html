@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lets explaine animation</title>
+    <style>
+        @keyframes sliding{
+            /* from{
+                background-color:limegreen;
+                left:0;
+            }
+            to{
+                background-color:lightslategrey;
+                left:60%;
+            } */
+
+            0%{
+                background-color:limegreen;
+                left:-20px;
+                top:-20px;
+                transform: scale(0.125);
+            }
+           25%{
+                background-color:red;
+                top:400px;
+                transform: scale(0.25);
+            }
+            50%{
+                background-color:orange;
+                /* left:40%;
+                top:40%; */
+                /* left:200px; */
+                top:0px;
+                transform: scale(0.5);
+            }
+            75%{
+                 background-color:blue;
+                /* left:60%; */
+                top: 400px; 
+                transform: scale(0.75);
+            }
+            100%{
+                background-color:lightslategrey;
+                /* left:80%; */
+                left:900px;
+                /* top:400px; */
+                /* top:80%; */
+                top:0px;
+            } 
+        }
+        .stage{
+
+            width:1000px;
+            height:500px;
+            background-color:lightskyblue;
+        }
+        .ball{
+
+            width:100px;
+            height:100px;
+            background-color:limegreen;
+            border-radius: 50%;
+            animation: sliding 6s ease-in-out 0.5s infinite alternate;
+            animation-play-state:running ;
+            position:relative;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>explain animation</h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+
+    
+</body>
+</html>
